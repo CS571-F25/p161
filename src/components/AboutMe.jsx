@@ -1,7 +1,7 @@
 export default function AboutMe(props) {
   return (
-    <div>
-      <h1>About Me!</h1>
+    <div className="container mt-4">
+      <h1>This is the About Me page.</h1>
     </div>
   );
 }

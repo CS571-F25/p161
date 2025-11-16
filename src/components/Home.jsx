@@ -1,7 +1,7 @@
-export default function Home(props) {
+export default function Home() {
   return (
-    <div>
-      <h1>Mitchell's Home Page!</h1>
+    <div className="container mt-4">
+      <h1>This is the Home page.</h1>
     </div>
   );
 }
