@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 export default function Navigation() {
   return (
+    // Creating the nav bar for the site
     <Navbar bg="light" expand="lg">
       <Container fluid>
         {" "}
+        {/* Home page routing to both Mitchell's Travels as well as Home */}
         <Navbar.Brand as={Link} to="/">
           Mitchell's Travels
         </Navbar.Brand>
@@ -15,14 +17,20 @@ export default function Navigation() {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/about">
-              About Me
-            </Nav.Link>
+
+            {/* Link to Destinations page */}
             <Nav.Link as={Link} to="/destinations">
               Destinations
             </Nav.Link>
+
+            {/* Link to Favorites page */}
             <Nav.Link as={Link} to="/favorites">
               Favorites
+            </Nav.Link>
+
+            {/* Link to About Me page */}
+            <Nav.Link as={Link} to="/about">
+              About Me
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
