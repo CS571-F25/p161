@@ -1,14 +1,6 @@
 import { Row, Col, Card } from "react-bootstrap";
 import BigBen from "../Images/BigBen.JPG";
-
-const destinations = [
-  {
-    id: 1,
-    name: "London",
-    description: "Test description for London.",
-    images: [BigBen],
-  },
-];
+import EiffelTower from "../Images/eiffel_tower.JPG";
 
 export default function Destinations() {
   return (
@@ -30,3 +22,19 @@ export default function Destinations() {
     </div>
   );
 }
+
+// The data for the destinations
+const destinations = [
+  {
+    id: 1,
+    name: "London",
+    description: "Test description for London.",
+    images: [BigBen],
+  },
+  {
+    id: 2,
+    name: "Paris",
+    description: "Test description for Paris.",
+    images: [EiffelTower],
+  },
+];
