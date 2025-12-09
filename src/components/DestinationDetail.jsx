@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
 import { destinationData } from "./destinationData";
 import useFavorites from "./useFavorites";
+import Footer from "./Footer.jsx";
 
 export default function DestinationDetail() {
   const { id } = useParams();
@@ -79,6 +80,8 @@ export default function DestinationDetail() {
           </Button>
         </Link>
       </div>
+
+      <Footer />
     </Container>
   );
 }

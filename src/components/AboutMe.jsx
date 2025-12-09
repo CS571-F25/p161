@@ -1,5 +1,7 @@
 import { Container, Row, Col, Image, Card } from "react-bootstrap";
 import ProfilePic from "../Images/ProfilePic.JPG";
+import Footer from "./Footer.jsx";
+import ContactForm from "./ContactForm";
 
 export default function AboutMe(props) {
   return (
@@ -39,25 +41,9 @@ export default function AboutMe(props) {
           </ul>
         </Col>
       </Row>
+      <ContactForm />
 
-      {/* Contact Me Section */}
-      <Row className="mb-5">
-        <Col>
-          <h2>Contact Me</h2>
-          <p>
-            Have any questions? Want to reach out?
-            <br />
-            Email:{" "}
-            <a
-              href="mailto:myoung37@wisc.edu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <strong>myoung37@wisc.edu</strong>
-            </a>
-          </p>
-        </Col>
-      </Row>
+      <Footer />
     </Container>
   );
 }

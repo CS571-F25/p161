@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Footer from "./Footer.jsx";
 
 export default function Home() {
   return (
@@ -28,6 +29,8 @@ export default function Home() {
           <Button style={{ margin: "1rem", width: "200px" }}>Favorites</Button>
         </Link>
       </div>
+
+      <Footer />
     </div>
   );
 }

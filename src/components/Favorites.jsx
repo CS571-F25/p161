@@ -2,6 +2,7 @@ import useFavorites from "./useFavorites";
 import { destinationData } from "./destinationData";
 import { Button, Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Footer from "./Footer.jsx";
 
 export default function Favorites() {
   const { favorites, toggleFavorite, isFavorite } = useFavorites();
@@ -58,6 +59,8 @@ export default function Favorites() {
           </Col>
         ))}
       </div>
+
+      <Footer />
     </div>
   );
 }
