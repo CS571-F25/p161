@@ -1,3 +1,4 @@
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -18,13 +19,13 @@ export default function Home() {
 
       <div style={{ marginTop: "3rem" }}>
         <Link to="/destinations">
-          <button style={{ margin: "1rem", width: "200px" }}>
+          <Button style={{ margin: "1rem", width: "200px" }}>
             View Destinations
-          </button>
+          </Button>
         </Link>
 
         <Link to="/favorites">
-          <button style={{ margin: "1rem", width: "200px" }}>Favorites</button>
+          <Button style={{ margin: "1rem", width: "200px" }}>Favorites</Button>
         </Link>
       </div>
     </div>

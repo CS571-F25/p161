@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { Container, Row, Col, Image, Card } from "react-bootstrap";
+import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
 import { destinationData } from "./destinationData";
 import useFavorites from "./useFavorites";
 
@@ -13,13 +13,15 @@ export default function DestinationDetail() {
   }
 
   return (
+    // Creating the layout for the destination detail page
     <Container className="mt-4">
       <Row className="mb-4 align-items-center">
+        {/** Giving the destination name and a button to favorite the destination from inside the page */}
         <Col>
           <h1>{destination.name}</h1>
           <p style={{ fontSize: "1.2rem" }}>{destination.description}</p>
 
-          <button
+          <Button
             onClick={() => toggleFavorite(destination.id)}
             style={{
               padding: "0.5rem 1rem",
@@ -30,10 +32,11 @@ export default function DestinationDetail() {
             {isFavorite(destination.id)
               ? "★ Remove from Favorites"
               : "☆ Add to Favorites"}
-          </button>
+          </Button>
         </Col>
       </Row>
 
+      {/** Mapping all the photos from the destination */}
       <h3>Photos</h3>
       <Row className="mb-4">
         {destination.images.map((img, index) => (
@@ -43,6 +46,7 @@ export default function DestinationDetail() {
         ))}
       </Row>
 
+      {/** Mapping the highlights of the destinations */}
       <h3>Highlights</h3>
       <Row className="mb-4">
         {destination.highlights.map((item, i) => (
@@ -52,6 +56,7 @@ export default function DestinationDetail() {
         ))}
       </Row>
 
+      {/** Mapping the fun facts  */}
       <h3>Fun Facts</h3>
       <ul>
         {destination.funFacts.map((fact, i) => (
@@ -59,17 +64,19 @@ export default function DestinationDetail() {
         ))}
       </ul>
 
+      {/** Button that sends the user back to the destinations page */}
       <div className="text-center mt-4">
         <Link to="/destinations">
-          <button
+          <Button
             style={{
               padding: "0.6rem 1.2rem",
               fontSize: "1rem",
               cursor: "pointer",
+              marginBottom: "2rem", // TESTING
             }}
           >
             ← Back to Destinations
-          </button>
+          </Button>
         </Link>
       </div>
     </Container>
