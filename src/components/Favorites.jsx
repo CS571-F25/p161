@@ -17,6 +17,7 @@ export default function Favorites() {
     <div className="container mt-4">
       <h1>Your Favorite Destinations</h1>
 
+      {/** If there are no favorited destinations, display this text */}
       {favoriteDestinations.length === 0 && (
         <p>You haven't added any favorites yet.</p>
       )}

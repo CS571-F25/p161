@@ -1,6 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 
 export default function DestinationCard({ destination, onFavorite }) {
+  // This is the card component for each destination
   return (
     <Card style={{ width: "18rem", margin: "1rem" }}>
       <Card.Img variant="top" src={destination.image} />

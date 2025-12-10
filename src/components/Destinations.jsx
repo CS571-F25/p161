@@ -19,6 +19,7 @@ export default function Destinations() {
     <div className="container mt-4">
       <h1>Destinations</h1>
 
+      {/** Search bar */}
       <SearchBar search={search} setSearch={setSearch} />
 
       <Row>

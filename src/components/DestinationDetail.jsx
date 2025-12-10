@@ -9,6 +9,7 @@ export default function DestinationDetail() {
   const destination = destinationData.find((d) => d.id === Number(id));
   const { isFavorite, toggleFavorite } = useFavorites();
 
+  // If the destination is not found, display a message
   if (!destination) {
     return <h1>Destination not found</h1>;
   }
@@ -22,6 +23,7 @@ export default function DestinationDetail() {
           <h1>{destination.name}</h1>
           <p style={{ fontSize: "1.2rem" }}>{destination.description}</p>
 
+          {/** Button for adding to favorites */}
           <Button
             onClick={() => toggleFavorite(destination.id)}
             style={{
@@ -73,7 +75,7 @@ export default function DestinationDetail() {
               padding: "0.6rem 1.2rem",
               fontSize: "1rem",
               cursor: "pointer",
-              marginBottom: "2rem", // TESTING
+              marginBottom: "2rem",
             }}
           >
             ← Back to Destinations

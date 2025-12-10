@@ -29,6 +29,8 @@ export default function Home() {
           }}
         />
       </div>
+
+      {/** Welcome and a small intro */}
       <h1>Welcome to Mitchell's Travels</h1>
 
       <p style={{ fontSize: "1.2rem", maxWidth: "600px", margin: "1rem auto" }}>
@@ -37,8 +39,10 @@ export default function Home() {
 
       <br />
 
+      {/** Featured Destinations section */}
       <h2>Featured Destinations</h2>
       <Row>
+        {/** Displaying the 3 featured destinations to the home screen */}
         {destinationData.slice(0, 3).map((dest) => (
           <Col md={4} key={dest.id}>
             <Card>
@@ -53,6 +57,7 @@ export default function Home() {
         ))}
       </Row>
 
+      {/** Buttons to navigate to Destinations and Favorites pages */}
       <div style={{ marginTop: "3rem" }}>
         <Link to="/destinations">
           <Button style={{ margin: "1rem", width: "200px" }}>
@@ -67,6 +72,7 @@ export default function Home() {
         </Link>
       </div>
 
+      {/** Footer component */}
       <Footer />
     </div>
   );
