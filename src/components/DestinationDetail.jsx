@@ -42,7 +42,7 @@ export default function DestinationDetail() {
       <Row className="mb-4">
         {destination.images.map((img, index) => (
           <Col key={index} md={4} className="mb-3">
-            <Image src={img} fluid rounded />
+            <Image src={img.src} alt={img.alt} fluid rounded />
           </Col>
         ))}
       </Row>

@@ -27,7 +27,11 @@ export default function Destinations() {
           <Col key={dest.id} md={4} className="mb-3">
             <Card className="h-100">
               <Link to={`/destination/${dest.id}`}>
-                <Card.Img variant="top" src={dest.images[0]} alt={dest.name} />
+                <Card.Img
+                  variant="top"
+                  src={dest.images[0].src}
+                  alt={dest.images[0].alt}
+                />
               </Link>
 
               <Card.Body>

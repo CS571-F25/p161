@@ -11,6 +11,7 @@ export default function AboutMe(props) {
         <Col md={4} className="text-center">
           <Image
             src={ProfilePic}
+            alt="Picture of Mitchell Young"
             roundedCircle
             fluid
             style={{ maxWidth: "200px" }}

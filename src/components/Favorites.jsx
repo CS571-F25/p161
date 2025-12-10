@@ -27,7 +27,11 @@ export default function Favorites() {
             <Card className="h-100">
               {/** Linking the card to the specific page for the destination */}
               <Link to={`/destination/${dest.id}`}>
-                <Card.Img variant="top" src={dest.images[0]} />
+                <Card.Img
+                  variant="top"
+                  src={dest.images[0].src}
+                  alt={dest.images[0].alt}
+                />
               </Link>
 
               <Card.Body>
