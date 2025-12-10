@@ -10,7 +10,7 @@ export default function DestinationDetail() {
   const { isFavorite, toggleFavorite } = useFavorites();
 
   if (!destination) {
-    return <h2>Destination not found</h2>;
+    return <h1>Destination not found</h1>;
   }
 
   return (
@@ -38,7 +38,7 @@ export default function DestinationDetail() {
       </Row>
 
       {/** Mapping all the photos from the destination */}
-      <h3>Photos</h3>
+      <h2>Photos</h2>
       <Row className="mb-4">
         {destination.images.map((img, index) => (
           <Col key={index} md={4} className="mb-3">
