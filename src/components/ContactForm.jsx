@@ -26,7 +26,7 @@ export default function ContactForm() {
 
   return (
     <div className="container mt-5 mb-5">
-      <h2>Contact Us</h2>
+      <h2>Contact Me</h2>
 
       {/** If submitted, display this alert */}
       {submitted && (
