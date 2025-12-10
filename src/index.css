@@ -1,67 +1,134 @@
+/* ============================
+   GLOBAL THEME
+   ============================ */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --primary: #3b82f6; /* Accessible blue (WCAG AA) */
+  --primary-dark: #1e40af;
+  --secondary: #14b8a6; /* Teal accent */
+  --text-dark: #1f2937; /* Dark gray */
+  --text-light: #ffffff;
+  --bg-light: #f8fafc;
+  --bg-card: #ffffff;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #f8f9fa;
+/* ============================
+     TYPOGRAPHY
+     ============================ */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  color: var(--text-dark);
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+p {
+  color: #374151;
+}
+
+/* ============================
+     BODY & LAYOUT
+     ============================ */
+body {
+  margin: 0;
+  background-color: var(--bg-light);
+}
+
+/* ============================
+     LINKS
+     ============================ */
+a {
+  color: var(--primary);
+  text-decoration: none;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* ============================
+     BUTTONS
+     ============================ */
+button,
+.btn {
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary,
+button {
+  background-color: var(--primary);
+  border: none;
+  color: white;
+}
+
+button:hover,
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Focus states (important for accessibility) */
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--secondary);
+}
+
+/* ============================
+     CARDS
+     ============================ */
+.card {
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: none !important;
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ============================
+     SEARCH BAR
+     ============================ */
+input[type="text"],
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 0.6rem 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* ============================
+     FOOTER
+     ============================ */
+footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #e5e7eb;
+  color: #111827;
 }
